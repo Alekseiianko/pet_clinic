@@ -1,4 +1,4 @@
-package ru.ianko.pet_clinic;
+package ru.ianko.pet_clinic.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
