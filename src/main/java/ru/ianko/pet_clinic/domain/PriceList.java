@@ -2,6 +2,13 @@ package ru.ianko.pet_clinic.domain;
 
 import javax.persistence.*;
 
+/**
+ * Класс для создания таблицы price_list. Отдает данные цена и название услуги
+ * при заполнении SessionList клиентом
+ * Так же сортирует докторов по айди при выборе той или иной услуге
+ * @autor Aleksei Ianko
+ */
+
 @Entity
 @Table(name = "price_list")
 public class PriceList {

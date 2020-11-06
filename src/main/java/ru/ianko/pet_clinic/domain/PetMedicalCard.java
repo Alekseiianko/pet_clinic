@@ -3,6 +3,12 @@ package ru.ianko.pet_clinic.domain;
 import javax.persistence.*;
 import java.util.Date;
 
+/**
+ * Класс для создания таблицы pet_medical_card. Необходим доктору для заполнения данных о визите
+ * и ведении мед карты для питомца
+ * @autor Aleksei Ianko
+ */
+
 @Entity
 @Table(name = "pet_medical_card")
 public class PetMedicalCard {

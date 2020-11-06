@@ -2,6 +2,12 @@ package ru.ianko.pet_clinic.domain;
 
 import javax.persistence.*;
 
+/**
+ * Класс для создания таблицы doctor_position. Необходим для привязки объектов Doctor к конкретным услугам
+ * в PriceList
+ * @autor Aleksei Ianko
+ */
+
 @Entity
 @Table(name = "doctor_position")
 public class DoctorPosition {

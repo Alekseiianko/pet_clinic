@@ -2,6 +2,11 @@ package ru.ianko.pet_clinic.domain;
 
 import javax.persistence.*;
 
+/**
+ * Класс для создания таблицы pet.
+ * @autor Aleksei Ianko
+ */
+
 @Entity
 @Table(name = "pet")
 public class Pet {

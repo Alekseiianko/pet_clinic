@@ -2,6 +2,12 @@ package ru.ianko.pet_clinic.domain;
 
 import javax.persistence.*;
 
+/**
+ * Класс для создания таблицы user_role. Необходим для присвоения клиенту роли, в целях
+ * возможности или невозможности корректирования разных моментов.
+ * @autor Aleksei Ianko
+ */
+
 @Entity
 @Table(name = "user_role")
 public class UserRole {

@@ -2,6 +2,12 @@ package ru.ianko.pet_clinic.domain;
 
 import javax.persistence.*;
 
+/**
+ * Класс для создания таблицы doctor. Необходим для клиента при создании записи, а так же
+ * для заполнения pet_medical_card после посещения
+ * @autor Aleksei Ianko
+ */
+
 @Entity
 @Table(name = "doctor")
 public class Doctor {

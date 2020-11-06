@@ -2,6 +2,12 @@ package ru.ianko.pet_clinic.domain;
 
 import javax.persistence.*;
 
+/**
+ * Класс для создания таблицы clinic. Необходим для привязки врачей к конкретной клинике
+ * а так же при создании записи клиента для отображение адреса
+ * @autor Aleksei Ianko
+ */
+
 @Entity
 @Table(name = "clinic")
 public class Clinic {

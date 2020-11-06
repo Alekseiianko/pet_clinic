@@ -2,6 +2,11 @@ package ru.ianko.pet_clinic.domain;
 
 import javax.persistence.*;
 
+/**
+ * Класс для создания таблицы pet_type. Необходим для присвоения типа питомца к объекту класса Pet
+ * @autor Aleksei Ianko
+ */
+
 @Entity
 @Table(name = "pet_type")
 public class PetType {

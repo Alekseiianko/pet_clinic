@@ -3,6 +3,13 @@ package ru.ianko.pet_clinic.domain;
 import javax.persistence.*;
 import java.util.Date;
 
+/**
+ * Класс для создания таблицы session_list. Необходим для заполнения клиентом в целях создания
+ * записи в клинику. Подтягивает информацию с остальным таблиц и на их основе формирует
+ * ЦЕЛОСТНУЮ запись
+ * @autor Aleksei Ianko
+ */
+
 @Entity
 @Table(name = "session_list")
 public class SessionList {
