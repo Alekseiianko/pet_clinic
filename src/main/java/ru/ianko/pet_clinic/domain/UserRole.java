@@ -1,5 +1,7 @@
 package ru.ianko.pet_clinic.domain;
 
+import org.springframework.security.core.GrantedAuthority;
+
 import javax.persistence.*;
 
 /**
@@ -10,7 +12,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "user_role")
-public class UserRole {
+public class UserRole implements GrantedAuthority {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -33,5 +35,10 @@ public class UserRole {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    @Override
+    public String getAuthority() {
+        return getRole();
     }
 }
