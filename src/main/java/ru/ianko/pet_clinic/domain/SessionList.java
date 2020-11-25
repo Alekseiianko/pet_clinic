@@ -1,5 +1,7 @@
 package ru.ianko.pet_clinic.domain;
 
+import org.springframework.test.context.jdbc.Sql;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -15,7 +17,7 @@ import java.util.Date;
 public class SessionList {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne(fetch = FetchType.EAGER)
@@ -36,6 +38,19 @@ public class SessionList {
     @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "price_list_id")
     private PriceList priceList;
+
+    public SessionList() {
+    }
+
+    public SessionList(Long id, Client client, Clinic clinic,
+                       Doctor doctor, Date date, PriceList priceList) {
+        this.id = id;
+        this.client = client;
+        this.clinic = clinic;
+        this.doctor = doctor;
+        this.date = date;
+        this.priceList = priceList;
+    }
 
     public Long getId() {
         return id;

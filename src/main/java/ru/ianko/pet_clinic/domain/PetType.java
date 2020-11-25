@@ -1,5 +1,7 @@
 package ru.ianko.pet_clinic.domain;
 
+import org.springframework.test.context.jdbc.Sql;
+
 import javax.persistence.*;
 
 /**
@@ -12,11 +14,19 @@ import javax.persistence.*;
 public class PetType {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "type", unique = true, nullable = false)
     private String type;
+
+    public PetType() {
+    }
+
+    public PetType(Long id, String type) {
+        this.id = id;
+        this.type = type;
+    }
 
     public Long getId() {
         return id;

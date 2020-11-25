@@ -1,12 +1,13 @@
 package ru.ianko.pet_clinic.domain;
 
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.test.context.jdbc.Sql;
 
 import javax.persistence.*;
 
 /**
  * Класс для создания таблицы user_role. Необходим для присвоения клиенту роли, в целях
- * возможности или невозможности корректирования разных моментов.
+ * возможности или невозможности корректирования разных данных.
  * @autor Aleksei Ianko
  */
 
@@ -15,11 +16,19 @@ import javax.persistence.*;
 public class UserRole implements GrantedAuthority {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "role", unique = true, nullable = false)
     private String role;
+
+    public UserRole() {
+    }
+
+    public UserRole(Long id, String role) {
+        this.id = id;
+        this.role = role;
+    }
 
     public Long getId() {
         return id;
@@ -39,6 +48,14 @@ public class UserRole implements GrantedAuthority {
 
     @Override
     public String getAuthority() {
-        return getRole();
+        return role;
+    }
+
+    @Override
+    public String toString() {
+        return "UserRole{" +
+                "id=" + id +
+                ", role='" + role + '\'' +
+                '}';
     }
 }

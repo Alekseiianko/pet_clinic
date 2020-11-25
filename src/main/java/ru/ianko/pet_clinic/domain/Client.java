@@ -12,7 +12,7 @@ import javax.persistence.*;
 public class Client {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "name", nullable = false)
@@ -27,6 +27,17 @@ public class Client {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_role_id")
     private UserRole userRole;
+
+    public Client() {
+    }
+
+    public Client(Long id, String name, String phone, String email, UserRole userRole) {
+        this.id = id;
+        this.name = name;
+        this.phone = phone;
+        this.email = email;
+        this.userRole = userRole;
+    }
 
     public Long getId() {
         return id;

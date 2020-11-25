@@ -1,5 +1,7 @@
 package ru.ianko.pet_clinic.domain;
 
+import org.springframework.test.context.jdbc.Sql;
+
 import javax.persistence.*;
 
 /**
@@ -14,7 +16,7 @@ import javax.persistence.*;
 public class PriceList {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "service", unique = true, nullable = false)
@@ -26,6 +28,16 @@ public class PriceList {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "doctor_position_id")
     private DoctorPosition doctorPosition;
+
+    public PriceList() {
+    }
+
+    public PriceList(Long id, String service, Integer price, DoctorPosition doctorPosition) {
+        this.id = id;
+        this.service = service;
+        this.price = price;
+        this.doctorPosition = doctorPosition;
+    }
 
     public Long getId() {
         return id;
