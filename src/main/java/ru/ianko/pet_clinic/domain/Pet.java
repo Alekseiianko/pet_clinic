@@ -42,6 +42,8 @@ public class Pet {
         this.age = age;
     }
 
+    // FIX добавить поле petMedicalCard
+
     public Long getId() {
         return id;
     }

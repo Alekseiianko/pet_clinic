@@ -6,7 +6,7 @@ import org.springframework.test.context.jdbc.Sql;
 import javax.persistence.*;
 
 /**
- * Класс для создания таблицы user_role. Необходим для присвоения клиенту роли, в целях
+ * Класс для создания таблицы user_role. Необходим для присвоения Client роли, в целях
  * возможности или невозможности корректирования разных данных.
  * @autor Aleksei Ianko
  */

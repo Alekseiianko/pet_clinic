@@ -5,7 +5,8 @@ import org.springframework.test.context.jdbc.Sql;
 import javax.persistence.*;
 
 /**
- * Класс для создания таблицы pet_type. Необходим для присвоения типа питомца к объекту класса Pet
+ * Класс для создания таблицы pet_type.
+ * Необходим для присвоения типа питомца к объекту класса Pet
  * @autor Aleksei Ianko
  */
 

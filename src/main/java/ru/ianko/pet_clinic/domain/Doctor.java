@@ -6,8 +6,8 @@ import javax.persistence.*;
 import java.util.Objects;
 
 /**
- * Класс для создания таблицы doctor. Необходим для клиента при создании записи, а так же
- * для заполнения pet_medical_card после посещения
+ * Класс для создания таблицы doctor. Необходим для клиента при создании записи,
+ * а так же для заполнения pet_medical_card после посещения
  * @autor Aleksei Ianko
  */
 

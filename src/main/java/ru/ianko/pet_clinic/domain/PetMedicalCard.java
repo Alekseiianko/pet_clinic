@@ -6,8 +6,9 @@ import javax.persistence.*;
 import java.util.Date;
 
 /**
- * Класс для создания таблицы pet_medical_card. Необходим доктору для заполнения данных о визите
- * и ведении мед карты для питомца
+ * Класс для создания таблицы pet_medical_card.
+ * Необходим Doctor для заполнения данных о визите
+ * и ведении мед карты для Pet
  * @autor Aleksei Ianko
  */
 

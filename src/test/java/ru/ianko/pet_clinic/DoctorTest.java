@@ -27,7 +27,7 @@ public class DoctorTest {
     private DoctorRepo doctorRepo;
 
     @Test
-    public void compare_two_list_by_clinicId() {
+    public void compareTwoList_byClinicId() {
         List<Doctor> listForTestRepoMethod = doctorRepo.findDoctorByClinicId((long) 1);
         List<Doctor> doctorList = new ArrayList<>();
         Clinic clinic = new Clinic((long) 1, "г.Санкт-Петербург, пр.Королева, д.57",

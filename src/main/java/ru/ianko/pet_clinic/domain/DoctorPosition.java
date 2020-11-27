@@ -6,8 +6,8 @@ import javax.persistence.*;
 import java.util.Objects;
 
 /**
- * Класс для создания таблицы doctor_position. Необходим для привязки объектов Doctor к конкретным услугам
- * в PriceList
+ * Класс для создания таблицы doctor_position.
+ * используется в классе Doctor и PriceList
  * @autor Aleksei Ianko
  */
 

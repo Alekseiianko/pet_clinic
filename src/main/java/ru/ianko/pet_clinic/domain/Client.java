@@ -3,7 +3,8 @@ package ru.ianko.pet_clinic.domain;
 import javax.persistence.*;
 
 /**
- * Класс для создания таблицы client. Необходим для регистрации пользователя и создания записи
+ * Класс для создания таблицы client. Необходим для регистрации пользователя
+ * и создания записи
  * @autor Aleksei Ianko
  */
 
